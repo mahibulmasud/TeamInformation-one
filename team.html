@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team information</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            font-family: arial;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            width:70%;
+            margin: 50px auto;
+        }
+        .team-main{
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+            overflow: hidden;
+        }
+        
+        .team-01{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .team-02{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-03{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .card{
+            border: 5px solid #cddc3930;
+            color: azure;
+            position: absolute;
+            top:100%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            height: 20vh;
+            width: 222px;
+            background-color: #7fffd41a;
+            transition: top 1s;
+           
+            
+        }
+        .team-main>div:hover .card{
+            top:50%;
+            cursor: pointer;
+        }
+        .card h2{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card-image{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Team information</h1>
+    <div class="team-main container">
+        <div class="team-01">
+                <img id="img1" class="card-image" src="images/masud.JPG" alt="masudur rahman picture">
+                <div class="card" id="card">
+                    <h2 class="h2">Kazi Masudur rahman</h2>
+                    <h2 class="h2">181-15-1743</h2>
+                </div>
+        </div>
+        <div class="team-02">
+                <img id="img2" class="card-image" src="images/marjanjpg.jpg" alt="jannatul marjan picture">
+                <div class="card" id="card">
+                    <h2 class="h2">Jannatul Marjan</h2>
+                    <h2 class="h2">181-15-1744</h2>
+                </div>
+        </div>
+        <div class="team-03">
+                <img id="img3" class="card-image" src="images/tanvir.jpg" alt="tanvir ahamed picture">
+                <div class="card" id="card">
+                    <h2 class="h2">Md. Tanvir Ahmed</h2>
+                    <h2 class="h2">181-15-1866</h2>
+                </div>
+        </div>
+    </div>
+    <!-- javascript code write here -->
+    <script>
+        let image1 = document.getElementById('img1');
+        let image2 = document.getElementById('img2');
+        let image3 = document.getElementById('img3');
+        let card = document.getElementsByClassName('card');
+        let images = document.getElementsByClassName('card-image');
+
+        for (let c = 0; c < card.length; c++) {
+            card[c].addEventListener('mouseover',function(){
+                if(c == 0){
+                    image1.style.filter='brightness(0.1)';
+                }
+                if(c == 1){
+                    image2.style.filter='brightness(0.1)';
+                }
+                if(c == 2){
+                    image3.style.filter='brightness(0.1)';
+                }
+            })
+        }
+        for (let c = 0; c < card.length; c++) {
+            card[c].addEventListener('mouseout',function(){
+                if(c == 0){
+                    image1.style.filter='brightness(1)';
+                }
+                if(c == 1){
+                    image2.style.filter='brightness(1)';
+                }
+                if(c == 2){
+                    image3.style.filter='brightness(1)';
+                }
+            })
+        }
+        for (let c = 0; c < images.length; c++) {
+            images[c].addEventListener('mouseover',function(){
+                if(c == 0){
+                    image1.style.filter='brightness(0.1)';
+                    image1.style.transition = 'filter 1s';
+                    // image1.style.transitionDuration= '1s';
+                }
+                if(c == 1){
+                    image2.style.filter='brightness(0.1)';
+                    image2.style.transition = 'filter 1s';
+                }
+                if(c == 2){
+                    image3.style.filter='brightness(0.1)';
+                    image3.style.transition = 'filter 1s';
+                }
+            })
+        }
+        for (let c = 0; c < images.length; c++) {
+            images[c].addEventListener('mouseout',function(){
+                if(c == 0){
+                    image1.style.filter='brightness(1)';
+                }
+                if(c == 1){
+                    image2.style.filter='brightness(1)';
+                }
+                if(c == 2){
+                    image3.style.filter='brightness(1)';
+                }
+            })
+        }
+        //////////////////////////
+         
+        // card.addEventListener('mouseover',function(){
+        //     image.style.filter='brightness(0.1)';
+
+        // })
+        // card.addEventListener('mouseout',function(){
+        //     image.style.filter='brightness(1)';
+        // })
+        // image.addEventListener('mouseover',function(){
+        //     image.style.filter='brightness(0.1)';
+        //     image.style.transition = "filter";
+        //     image.style.transitionDuration = "2s";
+        // })
+        // image.addEventListener('mouseout',function(){
+        //     image.style.filter='brightness(1)';
+        //     image.style.transition = "filter";
+        //     image.style.transitionDuration = "2s";
+        // })
+
+    </script>
+</body>
+</html>
