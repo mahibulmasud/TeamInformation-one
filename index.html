@@ -9,16 +9,31 @@
         *{margin: 0;padding: 0;}
         body{
             font-family: arial;
+            position: relative;
             background: rgb(101,112,154);
             background: linear-gradient(90deg, rgba(101,112,154,0.8827906162464986) 0%, rgba(223,59,179,0.7651435574229692) 52%, rgba(191,192,134,0.835171568627451) 85%);
         }
+        hr{
+            /* position: absolute; */
+            /* top: 10px; */
+            margin: 0 auto;
+            width: 100px;
+            border: 2px solid red;
+            margin-bottom: 20px;
+        }
         .text{
+            color: wheat;
             text-align: center;
             text-transform: uppercase;
+            margin: 20px 0px;
         }
         .container{
             width:70%;
-            margin: 50px auto;
+            /* height: 100vh; */
+            margin: 0 auto;
+            /* display: grid;
+            justify-content: center;
+            align-items: center; */
         }
         .team-main{
             display: grid;
@@ -76,29 +91,32 @@
 </head>
 <body>
     <h1 class="text">Team information</h1>
-    <div class="team-main container">
-        <div class="team-01">
-                <img id="img1" class="card-image" src="images/masud.JPG" alt="masudur rahman picture">
-                <div class="card" id="card">
-                    <h2 class="h2">Kazi Masudur rahman</h2>
-                    <h2 class="h2">181-15-1743</h2>
-                </div>
+    <hr>
+        <div class="team-main container">
+            <div class="team-01">
+                    <img id="img1" class="card-image" src="images/masud.JPG" alt="masudur rahman picture">
+                    <div class="card" id="card">
+                        <h2 class="h2">Kazi Masudur rahman</h2>
+                        <h2 class="h2">181-15-1743</h2>
+                    </div>
+            </div>
+            <div class="team-02">
+                    <img id="img2" class="card-image" src="images/marjanjpg.jpg" alt="jannatul marjan picture">
+                    <div class="card" id="card">
+                        <h2 class="h2">Jannatul Marjan</h2>
+                        <h2 class="h2">181-15-1744</h2>
+                    </div>
+            </div>
+            <div class="team-03">
+                    <img id="img3" class="card-image" src="images/tanvir.jpg" alt="tanvir ahamed picture">
+                    <div class="card" id="card">
+                        <h2 class="h2">Md. Tanvir Ahmed</h2>
+                        <h2 class="h2">181-15-1866</h2>
+                    </div>
+            </div>
         </div>
-        <div class="team-02">
-                <img id="img2" class="card-image" src="images/marjanjpg.jpg" alt="jannatul marjan picture">
-                <div class="card" id="card">
-                    <h2 class="h2">Jannatul Marjan</h2>
-                    <h2 class="h2">181-15-1744</h2>
-                </div>
-        </div>
-        <div class="team-03">
-                <img id="img3" class="card-image" src="images/tanvir.jpg" alt="tanvir ahamed picture">
-                <div class="card" id="card">
-                    <h2 class="h2">Md. Tanvir Ahmed</h2>
-                    <h2 class="h2">181-15-1866</h2>
-                </div>
-        </div>
-    </div>
+    
+    
     <!-- javascript code write here -->
     <script>
         let image1 = document.getElementById('img1');
