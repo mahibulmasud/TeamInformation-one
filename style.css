@@ -1,0 +1,86 @@
+*{margin: 0;padding: 0;}
+        body{
+            font-family: arial;
+            position: relative;
+            background: rgb(101,112,154);
+            background: linear-gradient(90deg, rgba(101,112,154,0.8827906162464986) 0%, rgba(223,59,179,0.7651435574229692) 52%, rgba(191,192,134,0.835171568627451) 85%);
+        }
+        hr{
+            /* position: absolute; */
+            /* top: 10px; */
+            margin: 0 auto;
+            width: 100px;
+            border: 2px solid red;
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        .text{
+            color: wheat;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 20px 0px;
+        }
+        .container{
+            width:70%;
+            /* height: 100vh; */
+            margin: 0 auto;
+            /* display: grid;
+            justify-content: center;
+            align-items: center; */
+        }
+        .team-main{
+            display: grid;
+            grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+            overflow: hidden;
+        }
+        .team-main>div{
+            border: 5px solid whitesmoke;
+            border-radius: 43px 0px 43px 0px;
+        }
+        .team-01{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .team-02{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-03{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .card{
+            border: 5px solid #cddc3930;
+            color: azure;
+            position: absolute;
+            top:100%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            height: 20vh;
+            width: 222px;
+            background-color: #7fffd41a;
+            transition: top 1s;
+            border-radius: 44px 0px 44px 0px;
+           
+            
+        }
+        .team-main>div:hover .card{
+            top:50%;
+            cursor: pointer;
+        }
+        .card h2{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .card-image{
+            width: 100%;
+            height: 100%;
+        }
